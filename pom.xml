@@ -6,10 +6,10 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.2.13.RELEASE</version>
-
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <packaging>pom</packaging>
+    <groupId>com.tsinghualei</groupId>
     <artifactId>BingGo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>BingGo</name>
@@ -88,6 +88,11 @@
 
     </dependencyManagement>
 
+    <modules>
+        <module>
+            NacosConsumer8083
+        </module>
+    </modules>
     <build>
         <plugins>
             <plugin>
