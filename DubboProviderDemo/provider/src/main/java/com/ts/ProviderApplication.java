@@ -1,13 +1,14 @@
-package com.example.binggo;
+package com.ts;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BingGoApplication {
+@EnableDubbo
+public class ProviderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BingGoApplication.class, args);
+        SpringApplication.run(ProviderApplication.class,args);
     }
-
 }

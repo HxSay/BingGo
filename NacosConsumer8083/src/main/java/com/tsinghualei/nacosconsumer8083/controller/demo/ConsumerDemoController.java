@@ -1,5 +1,6 @@
 package com.tsinghualei.nacosconsumer8083.controller.demo;
 
+import com.tsinghualei.nacosconsumer8083.service.AopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -26,6 +27,9 @@ public class ConsumerDemoController {
     @Value("${spring.application.name}")
     private String appName;
 
+    @Autowired
+    private AopService aopService;
+
     @GetMapping( "/nacos")
     public String getDiscovery(){
         System.err.println(serverURL);
@@ -38,6 +42,16 @@ public class ConsumerDemoController {
         String path = String.format("http://%s:%s/echo/%s",serviceInstance.getHost(),serviceInstance.getPort(),appName);
         System.out.println("request path:" +path);
         return restTemplate.getForObject(path,String.class);
+    }
+
+    @GetMapping("/aopTest")
+    public String aopTest(){
+        Long[] ids = new Long[10];
+        for(long i=0;i<10;++i){
+            ids[(int) i]=i;
+        }
+        aopService.aopTest(ids);
+        return "aopTest";
     }
 
 }
