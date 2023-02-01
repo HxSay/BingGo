@@ -93,6 +93,7 @@
         <module>
             NacosConsumer8083
         </module>
+        <module>DubboProviderDemo</module>
     </modules>
     <build>
         <plugins>
