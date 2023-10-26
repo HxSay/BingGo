@@ -1,0 +1,150 @@
+Classfile /Users/leiqinghua/src/BingGo/JavaDemo/src/main/java/base/ByteCodeDemo.class
+  Last modified 2022-11-21; size 839 bytes
+  MD5 checksum 46a5015c0a04461321fad63380f27915
+  Compiled from "ByteCodeDemo.java"
+public class base.ByteCodeDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #9.#33         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#34         // base/ByteCodeDemo.val:I
+   #3 = Class              #35            // base/ByteCodeDemo
+   #4 = Methodref          #3.#33         // base/ByteCodeDemo."<init>":()V
+   #5 = Methodref          #3.#36         // base/ByteCodeDemo.add:(II)I
+   #6 = Fieldref           #37.#38        // java/lang/System.out:Ljava/io/PrintStream;
+   #7 = Methodref          #39.#40        // java/io/PrintStream.println:(I)V
+   #8 = Fieldref           #3.#41         // base/ByteCodeDemo.sVal:I
+   #9 = Class              #42            // java/lang/Object
+  #10 = Utf8               val
+  #11 = Utf8               I
+  #12 = Utf8               sVal
+  #13 = Utf8               <init>
+  #14 = Utf8               ()V
+  #15 = Utf8               Code
+  #16 = Utf8               LineNumberTable
+  #17 = Utf8               LocalVariableTable
+  #18 = Utf8               this
+  #19 = Utf8               Lbase/ByteCodeDemo;
+  #20 = Utf8               main
+  #21 = Utf8               ([Ljava/lang/String;)V
+  #22 = Utf8               args
+  #23 = Utf8               [Ljava/lang/String;
+  #24 = Utf8               codeDemo
+  #25 = Utf8               a
+  #26 = Utf8               b
+  #27 = Utf8               c
+  #28 = Utf8               add
+  #29 = Utf8               (II)I
+  #30 = Utf8               <clinit>
+  #31 = Utf8               SourceFile
+  #32 = Utf8               ByteCodeDemo.java
+  #33 = NameAndType        #13:#14        // "<init>":()V
+  #34 = NameAndType        #10:#11        // val:I
+  #35 = Utf8               base/ByteCodeDemo
+  #36 = NameAndType        #28:#29        // add:(II)I
+  #37 = Class              #43            // java/lang/System
+  #38 = NameAndType        #44:#45        // out:Ljava/io/PrintStream;
+  #39 = Class              #46            // java/io/PrintStream
+  #40 = NameAndType        #47:#48        // println:(I)V
+  #41 = NameAndType        #12:#11        // sVal:I
+  #42 = Utf8               java/lang/Object
+  #43 = Utf8               java/lang/System
+  #44 = Utf8               out
+  #45 = Utf8               Ljava/io/PrintStream;
+  #46 = Utf8               java/io/PrintStream
+  #47 = Utf8               println
+  #48 = Utf8               (I)V
+{
+  public int val;
+    descriptor: I
+    flags: ACC_PUBLIC
+
+  public static int sVal;
+    descriptor: I
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public base.ByteCodeDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: iconst_1
+         6: putfield      #2                  // Field val:I
+         9: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lbase/ByteCodeDemo;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=5, args_size=1
+         0: new           #3                  // class base/ByteCodeDemo
+         3: dup
+         4: invokespecial #4                  // Method "<init>":()V
+         7: astore_1
+         8: iconst_0
+         9: istore_2
+        10: iconst_0
+        11: istore_3
+        12: aload_1
+        13: iload_2
+        14: iload_3
+        15: invokevirtual #5                  // Method add:(II)I
+        18: istore        4
+        20: getstatic     #6                  // Field java/lang/System.out:Ljava/io/PrintStream;
+        23: iload         4
+        25: invokevirtual #7                  // Method java/io/PrintStream.println:(I)V
+        28: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 8
+        line 11: 10
+        line 12: 12
+        line 13: 20
+        line 14: 28
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      29     0  args   [Ljava/lang/String;
+            8      21     1 codeDemo   Lbase/ByteCodeDemo;
+           10      19     2     a   I
+           12      17     3     b   I
+           20       9     4     c   I
+
+  public int add(int, int);
+    descriptor: (II)I
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: iload_1
+         1: iload_2
+         2: iadd
+         3: ireturn
+      LineNumberTable:
+        line 17: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  this   Lbase/ByteCodeDemo;
+            0       4     1     a   I
+            0       4     2     b   I
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: iconst_1
+         1: putstatic     #8                  // Field sVal:I
+         4: return
+      LineNumberTable:
+        line 6: 0
+}
+SourceFile: "ByteCodeDemo.java"
